@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Ru");
+	cout << "**** Анализ роста учеников ***\n\
+Введите рост(см) и нажмите <Enter>.\n\
+Для завершения введите 0 и нажмите < Enter>\n";
+	vector<int> H;
+	int h;
+	cin >> h;
+	while (h != 0)
+	{
+		H.push_back(h);
+		cin >> h;
+	}
+	double sum = 0;
+	for (auto a : H)
+		sum += a;
+	sum /= H.size();
+	cout << "Средний рост : " << sum << " см";
+	int counter = 0;
+	for (auto a : H)
+		if (a > sum)
+			counter++;
+	cout << "Людей с ростом выше срежнего: " <<counter; 
+}
