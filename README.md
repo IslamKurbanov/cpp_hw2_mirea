@@ -1,1 +1,1 @@
-# cpp_hw2_mirea
+# There’re solutions from procedural programming first year course in mirea
